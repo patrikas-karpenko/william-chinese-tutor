@@ -1,0 +1,82 @@
+/* style.css – how the page looks */
+
+:root {
+  --bg: #f4f4f5;      /* light grey page */
+  --card: #ffffff;    /* white message boxes */
+  --text: #1f2328;
+  --muted: #6b7280;
+  --line: #e4e4e7;
+  --accent: #2563eb;  /* William's blue */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* William on top, in the middle */
+.mascot { text-align: center; padding: 24px 16px 4px; }
+#cat {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-family: ui-monospace, Menlo, Consolas, "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--accent);
+}
+.name { margin: 6px 0 0; font-weight: 600; color: var(--muted); }
+
+/* The conversation */
+#chat {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.msg.william { align-self: flex-start; background: var(--card); border: 1px solid var(--line); }
+.msg.me { align-self: flex-end; background: var(--accent); color: white; }
+
+/* The input line at the bottom */
+#form { width: 100%; max-width: 720px; display: flex; gap: 8px; padding: 12px 16px 20px; }
+
+#input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+#input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+button {
+  padding: 0 18px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; }
