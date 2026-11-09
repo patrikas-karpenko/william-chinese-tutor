@@ -1,18 +1,24 @@
 {
- "course": "HSK Standard Course 1",
- "language": "zh",
- "learner_language": "en",
+ "id": "hsk1",
+ "name": "Chinese · HSK 1 (for English speakers)",
+ "target_language": "Chinese",
+ "learner_language": "English",
+ "format_example": "你好 (nǐ hǎo) – hello",
+ "restrict_vocabulary": true,
+ "instructions": "The student is an English-speaking adult beginner. Always give Chinese as characters, pinyin with tone marks and the English meaning.",
+ "ui": {
+  "lesson": "Lesson",
+  "you_will_learn": "You'll learn:",
+  "new_words": "New words",
+  "grammar": "Grammar",
+  "placeholder": "Write to William…",
+  "send": "Send",
+  "perfect": "Purr-fect! All correct!",
+  "score": "Score",
+  "no_server": "Miau… the server isn't answering. Is it running?",
+  "no_model": "Miau… I can't reach my brain right now. Check LLM_API_KEY."
+ },
  "source": "Words, meanings, lesson numbers and grammar points from HSK Standard Course 1 (BLCU Press), contents and vocabulary appendix. Example sentences are original.",
- "exercise_types": [
-  "tone_pick",
-  "pinyin_to_meaning",
-  "meaning_to_hanzi",
-  "fill_blank",
-  "word_order",
-  "translate_to_chinese",
-  "answer_question",
-  "listening"
- ],
  "practice_links": [
   {
    "label": "DailyZhongwen – HSK 1 videos, flashcards and quizzes",
@@ -22,58 +28,40 @@
  "lessons": [
   {
    "id": 1,
-   "title_zh": "你好",
-   "title_en": "Hello",
-   "page": 2,
+   "title": "1 · 你好",
+   "title_learner": "Hello",
    "words": [
     {
-     "zh": "你",
-     "pinyin": "nǐ",
-     "pos": "pron.",
-     "en": "you (singular)"
+     "text": "你",
+     "pron": "nǐ",
+     "meaning": "you (singular)"
     },
     {
-     "zh": "好",
-     "pinyin": "hǎo",
-     "pos": "adj.",
-     "en": "good, fine"
+     "text": "好",
+     "pron": "hǎo",
+     "meaning": "good, fine"
     },
     {
-     "zh": "您",
-     "pinyin": "nín",
-     "pos": "pron.",
-     "en": "you (polite)",
-     "beyond_syllabus": true
+     "text": "您",
+     "pron": "nín",
+     "meaning": "you (polite)",
+     "extra": true
     },
     {
-     "zh": "你们",
-     "pinyin": "nǐmen",
-     "pos": "pron.",
-     "en": "you (plural)"
+     "text": "你们",
+     "pron": "nǐmen",
+     "meaning": "you (plural)"
     },
     {
-     "zh": "对不起",
-     "pinyin": "duìbuqǐ",
-     "pos": "v.",
-     "en": "sorry"
+     "text": "对不起",
+     "pron": "duìbuqǐ",
+     "meaning": "sorry"
     },
     {
-     "zh": "没关系",
-     "pinyin": "méi guānxi",
-     "pos": "phrase",
-     "en": "it doesn't matter, that's OK"
+     "text": "没关系",
+     "pron": "méi guānxi",
+     "meaning": "it doesn't matter, that's OK"
     }
-   ],
-   "proper_nouns": [],
-   "pronunciation": [
-    "Initials b p m f d t n l g k h j q x",
-    "Finals i u ü er a ia ua o uo e ie üe ai uai ei uei(ui) ao iao",
-    "The four tones",
-    "Third tone + third tone: the first becomes second tone (你好 = ní hǎo)"
-   ],
-   "characters": [
-    "Strokes 一 丨 丿 丶 ㇏",
-    "Simple characters 一 二 三 十 八 六"
    ],
    "grammar": [
     {
@@ -83,19 +71,19 @@
      "pattern": "你好！ / 对不起！— 没关系！",
      "examples": [
       {
-       "zh": "你好！",
-       "pinyin": "Nǐ hǎo!",
-       "en": "Hello!"
+       "text": "你好！",
+       "pron": "Nǐ hǎo!",
+       "meaning": "Hello!"
       },
       {
-       "zh": "您好！",
-       "pinyin": "Nín hǎo!",
-       "en": "Hello! (polite)"
+       "text": "您好！",
+       "pron": "Nín hǎo!",
+       "meaning": "Hello! (polite)"
       },
       {
-       "zh": "对不起！— 没关系！",
-       "pinyin": "Duìbuqǐ! — Méi guānxi!",
-       "en": "Sorry! — That's OK!"
+       "text": "对不起！— 没关系！",
+       "pron": "Duìbuqǐ! — Méi guānxi!",
+       "meaning": "Sorry! — That's OK!"
       }
      ],
      "requires": []
@@ -104,45 +92,29 @@
   },
   {
    "id": 2,
-   "title_zh": "谢谢你",
-   "title_en": "Thank you",
-   "page": 8,
+   "title": "2 · 谢谢你",
+   "title_learner": "Thank you",
    "words": [
     {
-     "zh": "谢谢",
-     "pinyin": "xièxie",
-     "pos": "v.",
-     "en": "to thank"
+     "text": "谢谢",
+     "pron": "xièxie",
+     "meaning": "to thank"
     },
     {
-     "zh": "不",
-     "pinyin": "bù",
-     "pos": "adv.",
-     "en": "no, not"
+     "text": "不",
+     "pron": "bù",
+     "meaning": "no, not"
     },
     {
-     "zh": "不客气",
-     "pinyin": "bú kèqi",
-     "pos": "phrase",
-     "en": "you're welcome"
+     "text": "不客气",
+     "pron": "bú kèqi",
+     "meaning": "you're welcome"
     },
     {
-     "zh": "再见",
-     "pinyin": "zàijiàn",
-     "pos": "v.",
-     "en": "goodbye"
+     "text": "再见",
+     "pron": "zàijiàn",
+     "meaning": "goodbye"
     }
-   ],
-   "proper_nouns": [],
-   "pronunciation": [
-    "Initials zh ch sh r z c s",
-    "Finals ou iou(iu) an ian uan üan en in uen(un) ün ang iang uang eng ing ueng ong iong",
-    "The neutral tone (谢谢 xièxie)",
-    "Where tone marks go; short forms iu, ui, un"
-   ],
-   "characters": [
-    "Strokes ㇇ ㇄ 亅",
-    "Simple characters 口 见 山 小 不"
    ],
    "grammar": [
     {
@@ -152,14 +124,14 @@
      "pattern": "谢谢！— 不客气！ / 再见！",
      "examples": [
       {
-       "zh": "谢谢你！— 不客气！",
-       "pinyin": "Xièxie nǐ! — Bú kèqi!",
-       "en": "Thank you! — You're welcome!"
+       "text": "谢谢你！— 不客气！",
+       "pron": "Xièxie nǐ! — Bú kèqi!",
+       "meaning": "Thank you! — You're welcome!"
       },
       {
-       "zh": "再见！",
-       "pinyin": "Zàijiàn!",
-       "en": "Goodbye!"
+       "text": "再见！",
+       "pron": "Zàijiàn!",
+       "meaning": "Goodbye!"
       }
      ],
      "requires": []
@@ -168,95 +140,69 @@
   },
   {
    "id": 3,
-   "title_zh": "你叫什么名字",
-   "title_en": "What's your name",
-   "page": 14,
+   "title": "3 · 你叫什么名字",
+   "title_learner": "What's your name",
    "words": [
     {
-     "zh": "叫",
-     "pinyin": "jiào",
-     "pos": "v.",
-     "en": "to be called"
+     "text": "叫",
+     "pron": "jiào",
+     "meaning": "to be called"
     },
     {
-     "zh": "什么",
-     "pinyin": "shénme",
-     "pos": "pron.",
-     "en": "what"
+     "text": "什么",
+     "pron": "shénme",
+     "meaning": "what"
     },
     {
-     "zh": "名字",
-     "pinyin": "míngzi",
-     "pos": "n.",
-     "en": "name"
+     "text": "名字",
+     "pron": "míngzi",
+     "meaning": "name"
     },
     {
-     "zh": "我",
-     "pinyin": "wǒ",
-     "pos": "pron.",
-     "en": "I, me"
+     "text": "我",
+     "pron": "wǒ",
+     "meaning": "I, me"
     },
     {
-     "zh": "是",
-     "pinyin": "shì",
-     "pos": "v.",
-     "en": "to be"
+     "text": "是",
+     "pron": "shì",
+     "meaning": "to be"
     },
     {
-     "zh": "老师",
-     "pinyin": "lǎoshī",
-     "pos": "n.",
-     "en": "teacher"
+     "text": "老师",
+     "pron": "lǎoshī",
+     "meaning": "teacher"
     },
     {
-     "zh": "吗",
-     "pinyin": "ma",
-     "pos": "part.",
-     "en": "question particle (yes/no questions)"
+     "text": "吗",
+     "pron": "ma",
+     "meaning": "question particle (yes/no questions)"
     },
     {
-     "zh": "学生",
-     "pinyin": "xuésheng",
-     "pos": "n.",
-     "en": "student"
+     "text": "学生",
+     "pron": "xuésheng",
+     "meaning": "student"
     },
     {
-     "zh": "人",
-     "pinyin": "rén",
-     "pos": "n.",
-     "en": "person"
+     "text": "人",
+     "pron": "rén",
+     "meaning": "person"
+    },
+    {
+     "text": "李月",
+     "pron": "Lǐ Yuè",
+     "meaning": "Li Yue (a person)"
+    },
+    {
+     "text": "中国",
+     "pron": "Zhōngguó",
+     "meaning": "China"
+    },
+    {
+     "text": "美国",
+     "pron": "Měiguó",
+     "meaning": "the USA"
     }
-   ],
-   "proper_nouns": [
-    {
-     "zh": "李月",
-     "pinyin": "Lǐ Yuè",
-     "pos": "name",
-     "en": "Li Yue (a person)"
-    },
-    {
-     "zh": "中国",
-     "pinyin": "Zhōngguó",
-     "pos": "name",
-     "en": "China"
-    },
-    {
-     "zh": "美国",
-     "pinyin": "Měiguó",
-     "pos": "name",
-     "en": "the USA"
-    }
-   ],
-   "pronunciation": [
-    "j q x versus z c s",
-    "i u ü",
-    "Tone change of 不",
-    "ü after j q x is written u (ju, qu, xu)"
-   ],
-   "characters": [
-    "Strokes ㇆ ㇂",
-    "Simple characters 月 心 中 人",
-    "Stroke order: horizontal before vertical, left-falling before right-falling"
    ],
    "grammar": [
     {
@@ -266,14 +212,14 @@
      "pattern": "你叫什么名字？ — 我叫……",
      "examples": [
       {
-       "zh": "你叫什么名字？",
-       "pinyin": "Nǐ jiào shénme míngzi?",
-       "en": "What's your name?"
+       "text": "你叫什么名字？",
+       "pron": "Nǐ jiào shénme míngzi?",
+       "meaning": "What's your name?"
       },
       {
-       "zh": "我叫李月。",
-       "pinyin": "Wǒ jiào Lǐ Yuè.",
-       "en": "My name is Li Yue."
+       "text": "我叫李月。",
+       "pron": "Wǒ jiào Lǐ Yuè.",
+       "meaning": "My name is Li Yue."
       }
      ],
      "requires": [
@@ -287,14 +233,14 @@
      "pattern": "A 是 B / A 不是 B",
      "examples": [
       {
-       "zh": "我是老师。",
-       "pinyin": "Wǒ shì lǎoshī.",
-       "en": "I am a teacher."
+       "text": "我是老师。",
+       "pron": "Wǒ shì lǎoshī.",
+       "meaning": "I am a teacher."
       },
       {
-       "zh": "我不是中国人。",
-       "pinyin": "Wǒ bú shì Zhōngguó rén.",
-       "en": "I am not Chinese."
+       "text": "我不是中国人。",
+       "pron": "Wǒ bú shì Zhōngguó rén.",
+       "meaning": "I am not Chinese."
       }
      ],
      "requires": [
@@ -308,14 +254,14 @@
      "pattern": "statement + 吗？",
      "examples": [
       {
-       "zh": "你是学生吗？",
-       "pinyin": "Nǐ shì xuésheng ma?",
-       "en": "Are you a student?"
+       "text": "你是学生吗？",
+       "pron": "Nǐ shì xuésheng ma?",
+       "meaning": "Are you a student?"
       },
       {
-       "zh": "你是美国人吗？",
-       "pinyin": "Nǐ shì Měiguó rén ma?",
-       "en": "Are you American?"
+       "text": "你是美国人吗？",
+       "pron": "Nǐ shì Měiguó rén ma?",
+       "meaning": "Are you American?"
       }
      ],
      "requires": [
@@ -326,82 +272,59 @@
   },
   {
    "id": 4,
-   "title_zh": "她是我的汉语老师",
-   "title_en": "She is my Chinese teacher",
-   "page": 22,
+   "title": "4 · 她是我的汉语老师",
+   "title_learner": "She is my Chinese teacher",
    "words": [
     {
-     "zh": "她",
-     "pinyin": "tā",
-     "pos": "pron.",
-     "en": "she, her"
+     "text": "她",
+     "pron": "tā",
+     "meaning": "she, her"
     },
     {
-     "zh": "谁",
-     "pinyin": "shéi",
-     "pos": "pron.",
-     "en": "who"
+     "text": "谁",
+     "pron": "shéi",
+     "meaning": "who"
     },
     {
-     "zh": "的",
-     "pinyin": "de",
-     "pos": "part.",
-     "en": "possessive/attributive particle"
+     "text": "的",
+     "pron": "de",
+     "meaning": "possessive/attributive particle"
     },
     {
-     "zh": "汉语",
-     "pinyin": "Hànyǔ",
-     "pos": "n.",
-     "en": "Chinese (language)"
+     "text": "汉语",
+     "pron": "Hànyǔ",
+     "meaning": "Chinese (language)"
     },
     {
-     "zh": "哪",
-     "pinyin": "nǎ",
-     "pos": "pron.",
-     "en": "which"
+     "text": "哪",
+     "pron": "nǎ",
+     "meaning": "which"
     },
     {
-     "zh": "国",
-     "pinyin": "guó",
-     "pos": "n.",
-     "en": "country"
+     "text": "国",
+     "pron": "guó",
+     "meaning": "country"
     },
     {
-     "zh": "呢",
-     "pinyin": "ne",
-     "pos": "part.",
-     "en": "question particle ('and you?')"
+     "text": "呢",
+     "pron": "ne",
+     "meaning": "question particle ('and you?')"
     },
     {
-     "zh": "他",
-     "pinyin": "tā",
-     "pos": "pron.",
-     "en": "he, him"
+     "text": "他",
+     "pron": "tā",
+     "meaning": "he, him"
     },
     {
-     "zh": "同学",
-     "pinyin": "tóngxué",
-     "pos": "n.",
-     "en": "classmate"
+     "text": "同学",
+     "pron": "tóngxué",
+     "meaning": "classmate"
     },
     {
-     "zh": "朋友",
-     "pinyin": "péngyou",
-     "pos": "n.",
-     "en": "friend"
+     "text": "朋友",
+     "pron": "péngyou",
+     "meaning": "friend"
     }
-   ],
-   "proper_nouns": [],
-   "pronunciation": [
-    "zh ch sh r",
-    "n versus ng (an/ang, en/eng, in/ing)",
-    "Tone change of 一",
-    "Spelling with y and w"
-   ],
-   "characters": [
-    "Strokes ㇗ ㇠",
-    "Simple characters 七 儿 几 九",
-    "Stroke order: top before bottom, left before right"
    ],
    "grammar": [
     {
@@ -411,14 +334,14 @@
      "pattern": "她是谁？ / 你是哪国人？",
      "examples": [
       {
-       "zh": "她是谁？",
-       "pinyin": "Tā shì shéi?",
-       "en": "Who is she?"
+       "text": "她是谁？",
+       "pron": "Tā shì shéi?",
+       "meaning": "Who is she?"
       },
       {
-       "zh": "你是哪国人？",
-       "pinyin": "Nǐ shì nǎ guó rén?",
-       "en": "Which country are you from?"
+       "text": "你是哪国人？",
+       "pron": "Nǐ shì nǎ guó rén?",
+       "meaning": "Which country are you from?"
       }
      ],
      "requires": [
@@ -433,14 +356,14 @@
      "pattern": "我的老师 / 她是我的汉语老师",
      "examples": [
       {
-       "zh": "她是我的汉语老师。",
-       "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī.",
-       "en": "She is my Chinese teacher."
+       "text": "她是我的汉语老师。",
+       "pron": "Tā shì wǒ de Hànyǔ lǎoshī.",
+       "meaning": "She is my Chinese teacher."
       },
       {
-       "zh": "他是我的同学。",
-       "pinyin": "Tā shì wǒ de tóngxué.",
-       "en": "He is my classmate."
+       "text": "他是我的同学。",
+       "pron": "Tā shì wǒ de tóngxué.",
+       "meaning": "He is my classmate."
       }
      ],
      "requires": [
@@ -454,9 +377,9 @@
      "pattern": "……，你呢？",
      "examples": [
       {
-       "zh": "我是美国人，你呢？",
-       "pinyin": "Wǒ shì Měiguó rén, nǐ ne?",
-       "en": "I'm American, and you?"
+       "text": "我是美国人，你呢？",
+       "pron": "Wǒ shì Měiguó rén, nǐ ne?",
+       "meaning": "I'm American, and you?"
       }
      ],
      "requires": [
@@ -467,143 +390,110 @@
   },
   {
    "id": 5,
-   "title_zh": "她女儿今年二十岁",
-   "title_en": "Her daughter is 20 years old this year",
-   "page": 30,
+   "title": "5 · 她女儿今年二十岁",
+   "title_learner": "Her daughter is 20 years old this year",
    "words": [
     {
-     "zh": "家",
-     "pinyin": "jiā",
-     "pos": "n.",
-     "en": "family, home"
+     "text": "家",
+     "pron": "jiā",
+     "meaning": "family, home"
     },
     {
-     "zh": "有",
-     "pinyin": "yǒu",
-     "pos": "v.",
-     "en": "to have"
+     "text": "有",
+     "pron": "yǒu",
+     "meaning": "to have"
     },
     {
-     "zh": "口",
-     "pinyin": "kǒu",
-     "pos": "m.",
-     "en": "measure word for family members",
-     "beyond_syllabus": true
+     "text": "口",
+     "pron": "kǒu",
+     "meaning": "measure word for family members",
+     "extra": true
     },
     {
-     "zh": "女儿",
-     "pinyin": "nǚ'ér",
-     "pos": "n.",
-     "en": "daughter"
+     "text": "女儿",
+     "pron": "nǚ'ér",
+     "meaning": "daughter"
     },
     {
-     "zh": "几",
-     "pinyin": "jǐ",
-     "pos": "pron.",
-     "en": "how many (small numbers)"
+     "text": "几",
+     "pron": "jǐ",
+     "meaning": "how many (small numbers)"
     },
     {
-     "zh": "岁",
-     "pinyin": "suì",
-     "pos": "m.",
-     "en": "years of age"
+     "text": "岁",
+     "pron": "suì",
+     "meaning": "years of age"
     },
     {
-     "zh": "了",
-     "pinyin": "le",
-     "pos": "part.",
-     "en": "marks a change or new situation"
+     "text": "了",
+     "pron": "le",
+     "meaning": "marks a change or new situation"
     },
     {
-     "zh": "今年",
-     "pinyin": "jīnnián",
-     "pos": "n.",
-     "en": "this year"
+     "text": "今年",
+     "pron": "jīnnián",
+     "meaning": "this year"
     },
     {
-     "zh": "多",
-     "pinyin": "duō",
-     "pos": "adv.",
-     "en": "how (with adjectives: 多大)"
+     "text": "多",
+     "pron": "duō",
+     "meaning": "how (with adjectives: 多大)"
     },
     {
-     "zh": "大",
-     "pinyin": "dà",
-     "pos": "adj.",
-     "en": "big; old (age)"
+     "text": "大",
+     "pron": "dà",
+     "meaning": "big; old (age)"
     },
     {
-     "zh": "一",
-     "pinyin": "yī",
-     "pos": "num.",
-     "en": "one"
+     "text": "一",
+     "pron": "yī",
+     "meaning": "one"
     },
     {
-     "zh": "二",
-     "pinyin": "èr",
-     "pos": "num.",
-     "en": "two"
+     "text": "二",
+     "pron": "èr",
+     "meaning": "two"
     },
     {
-     "zh": "三",
-     "pinyin": "sān",
-     "pos": "num.",
-     "en": "three"
+     "text": "三",
+     "pron": "sān",
+     "meaning": "three"
     },
     {
-     "zh": "四",
-     "pinyin": "sì",
-     "pos": "num.",
-     "en": "four"
+     "text": "四",
+     "pron": "sì",
+     "meaning": "four"
     },
     {
-     "zh": "五",
-     "pinyin": "wǔ",
-     "pos": "num.",
-     "en": "five"
+     "text": "五",
+     "pron": "wǔ",
+     "meaning": "five"
     },
     {
-     "zh": "六",
-     "pinyin": "liù",
-     "pos": "num.",
-     "en": "six"
+     "text": "六",
+     "pron": "liù",
+     "meaning": "six"
     },
     {
-     "zh": "七",
-     "pinyin": "qī",
-     "pos": "num.",
-     "en": "seven"
+     "text": "七",
+     "pron": "qī",
+     "meaning": "seven"
     },
     {
-     "zh": "八",
-     "pinyin": "bā",
-     "pos": "num.",
-     "en": "eight"
+     "text": "八",
+     "pron": "bā",
+     "meaning": "eight"
     },
     {
-     "zh": "九",
-     "pinyin": "jiǔ",
-     "pos": "num.",
-     "en": "nine"
+     "text": "九",
+     "pron": "jiǔ",
+     "meaning": "nine"
     },
     {
-     "zh": "十",
-     "pinyin": "shí",
-     "pos": "num.",
-     "en": "ten"
+     "text": "十",
+     "pron": "shí",
+     "meaning": "ten"
     }
-   ],
-   "proper_nouns": [],
-   "pronunciation": [
-    "The -r ending (儿化)",
-    "Finals starting with i, u, ü",
-    "Aspirated versus unaspirated (b/p, d/t, g/k)",
-    "The apostrophe (nǚ'ér)"
-   ],
-   "characters": [
-    "Strokes ㇀ ㇁",
-    "Simple characters 水 女 了 大",
-    "Stroke order: outside before inside, middle before sides"
    ],
    "grammar": [
     {
@@ -613,19 +503,19 @@
      "pattern": "二十 / 三十五",
      "examples": [
       {
-       "zh": "二十",
-       "pinyin": "èrshí",
-       "en": "20"
+       "text": "二十",
+       "pron": "èrshí",
+       "meaning": "20"
       },
       {
-       "zh": "三十五",
-       "pinyin": "sānshíwǔ",
-       "en": "35"
+       "text": "三十五",
+       "pron": "sānshíwǔ",
+       "meaning": "35"
       },
       {
-       "zh": "九十九",
-       "pinyin": "jiǔshíjiǔ",
-       "en": "99"
+       "text": "九十九",
+       "pron": "jiǔshíjiǔ",
+       "meaning": "99"
       }
      ],
      "requires": []
@@ -637,14 +527,14 @@
      "pattern": "几 + measure word + noun",
      "examples": [
       {
-       "zh": "你家有几口人？",
-       "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
-       "en": "How many people are in your family?"
+       "text": "你家有几口人？",
+       "pron": "Nǐ jiā yǒu jǐ kǒu rén?",
+       "meaning": "How many people are in your family?"
       },
       {
-       "zh": "你女儿几岁了？",
-       "pinyin": "Nǐ nǚ'ér jǐ suì le?",
-       "en": "How old is your daughter?"
+       "text": "你女儿几岁了？",
+       "pron": "Nǐ nǚ'ér jǐ suì le?",
+       "meaning": "How old is your daughter?"
       }
      ],
      "requires": [
@@ -659,9 +549,9 @@
      "pattern": "……了",
      "examples": [
       {
-       "zh": "她今年二十岁了。",
-       "pinyin": "Tā jīnnián èrshí suì le.",
-       "en": "She is 20 this year."
+       "text": "她今年二十岁了。",
+       "pron": "Tā jīnnián èrshí suì le.",
+       "meaning": "She is 20 this year."
       }
      ],
      "requires": [
@@ -675,14 +565,14 @@
      "pattern": "你今年多大了？",
      "examples": [
       {
-       "zh": "你今年多大了？",
-       "pinyin": "Nǐ jīnnián duō dà le?",
-       "en": "How old are you this year?"
+       "text": "你今年多大了？",
+       "pron": "Nǐ jīnnián duō dà le?",
+       "meaning": "How old are you this year?"
       },
       {
-       "zh": "我今年二十八岁。",
-       "pinyin": "Wǒ jīnnián èrshíbā suì.",
-       "en": "I'm 28 this year."
+       "text": "我今年二十八岁。",
+       "pron": "Wǒ jīnnián èrshíbā suì.",
+       "meaning": "I'm 28 this year."
       }
      ],
      "requires": [
@@ -693,85 +583,71 @@
   },
   {
    "id": 6,
-   "title_zh": "我会说汉语",
-   "title_en": "I can speak Chinese",
-   "page": 40,
+   "title": "6 · 我会说汉语",
+   "title_learner": "I can speak Chinese",
    "words": [
     {
-     "zh": "会",
-     "pinyin": "huì",
-     "pos": "mod.",
-     "en": "can (a learned skill)"
+     "text": "会",
+     "pron": "huì",
+     "meaning": "can (a learned skill)"
     },
     {
-     "zh": "说",
-     "pinyin": "shuō",
-     "pos": "v.",
-     "en": "to speak, to say"
+     "text": "说",
+     "pron": "shuō",
+     "meaning": "to speak, to say"
     },
     {
-     "zh": "妈妈",
-     "pinyin": "māma",
-     "pos": "n.",
-     "en": "mother"
+     "text": "妈妈",
+     "pron": "māma",
+     "meaning": "mother"
     },
     {
-     "zh": "菜",
-     "pinyin": "cài",
-     "pos": "n.",
-     "en": "dish, food"
+     "text": "菜",
+     "pron": "cài",
+     "meaning": "dish, food"
     },
     {
-     "zh": "很",
-     "pinyin": "hěn",
-     "pos": "adv.",
-     "en": "very"
+     "text": "很",
+     "pron": "hěn",
+     "meaning": "very"
     },
     {
-     "zh": "好吃",
-     "pinyin": "hǎochī",
-     "pos": "adj.",
-     "en": "tasty",
-     "beyond_syllabus": true
+     "text": "好吃",
+     "pron": "hǎochī",
+     "meaning": "tasty",
+     "extra": true
     },
     {
-     "zh": "做",
-     "pinyin": "zuò",
-     "pos": "v.",
-     "en": "to do, to make, to cook"
+     "text": "做",
+     "pron": "zuò",
+     "meaning": "to do, to make, to cook"
     },
     {
-     "zh": "写",
-     "pinyin": "xiě",
-     "pos": "v.",
-     "en": "to write"
+     "text": "写",
+     "pron": "xiě",
+     "meaning": "to write"
     },
     {
-     "zh": "汉字",
-     "pinyin": "Hànzì",
-     "pos": "n.",
-     "en": "Chinese character"
+     "text": "汉字",
+     "pron": "Hànzì",
+     "meaning": "Chinese character"
     },
     {
-     "zh": "字",
-     "pinyin": "zì",
-     "pos": "n.",
-     "en": "character, word"
+     "text": "字",
+     "pron": "zì",
+     "meaning": "character, word"
     },
     {
-     "zh": "怎么",
-     "pinyin": "zěnme",
-     "pos": "pron.",
-     "en": "how"
+     "text": "怎么",
+     "pron": "zěnme",
+     "meaning": "how"
     },
     {
-     "zh": "读",
-     "pinyin": "dú",
-     "pos": "v.",
-     "en": "to read (aloud)"
+     "text": "读",
+     "pron": "dú",
+     "meaning": "to read (aloud)"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l6_hui1",
@@ -780,14 +656,14 @@
      "pattern": "我会 / 不会 + verb",
      "examples": [
       {
-       "zh": "我会说汉语。",
-       "pinyin": "Wǒ huì shuō Hànyǔ.",
-       "en": "I can speak Chinese."
+       "text": "我会说汉语。",
+       "pron": "Wǒ huì shuō Hànyǔ.",
+       "meaning": "I can speak Chinese."
       },
       {
-       "zh": "我不会做中国菜。",
-       "pinyin": "Wǒ bú huì zuò Zhōngguó cài.",
-       "en": "I can't cook Chinese food."
+       "text": "我不会做中国菜。",
+       "pron": "Wǒ bú huì zuò Zhōngguó cài.",
+       "meaning": "I can't cook Chinese food."
       }
      ],
      "requires": [
@@ -801,14 +677,14 @@
      "pattern": "noun + 很 + adjective",
      "examples": [
       {
-       "zh": "中国菜很好吃。",
-       "pinyin": "Zhōngguó cài hěn hǎochī.",
-       "en": "Chinese food is tasty."
+       "text": "中国菜很好吃。",
+       "pron": "Zhōngguó cài hěn hǎochī.",
+       "meaning": "Chinese food is tasty."
       },
       {
-       "zh": "你的汉语很好。",
-       "pinyin": "Nǐ de Hànyǔ hěn hǎo.",
-       "en": "Your Chinese is good."
+       "text": "你的汉语很好。",
+       "pron": "Nǐ de Hànyǔ hěn hǎo.",
+       "meaning": "Your Chinese is good."
       }
      ],
      "requires": [
@@ -823,14 +699,14 @@
      "pattern": "……怎么 + verb？",
      "examples": [
       {
-       "zh": "你的名字怎么写？",
-       "pinyin": "Nǐ de míngzi zěnme xiě?",
-       "en": "How do you write your name?"
+       "text": "你的名字怎么写？",
+       "pron": "Nǐ de míngzi zěnme xiě?",
+       "meaning": "How do you write your name?"
       },
       {
-       "zh": "中国菜怎么做？",
-       "pinyin": "Zhōngguó cài zěnme zuò?",
-       "en": "How do you cook Chinese food?"
+       "text": "中国菜怎么做？",
+       "pron": "Zhōngguó cài zěnme zuò?",
+       "meaning": "How do you cook Chinese food?"
       }
      ],
      "requires": [
@@ -841,85 +717,71 @@
   },
   {
    "id": 7,
-   "title_zh": "今天几号",
-   "title_en": "What's the date today",
-   "page": 48,
+   "title": "7 · 今天几号",
+   "title_learner": "What's the date today",
    "words": [
     {
-     "zh": "请",
-     "pinyin": "qǐng",
-     "pos": "v.",
-     "en": "please"
+     "text": "请",
+     "pron": "qǐng",
+     "meaning": "please"
     },
     {
-     "zh": "问",
-     "pinyin": "wèn",
-     "pos": "v.",
-     "en": "to ask",
-     "beyond_syllabus": true
+     "text": "问",
+     "pron": "wèn",
+     "meaning": "to ask",
+     "extra": true
     },
     {
-     "zh": "今天",
-     "pinyin": "jīntiān",
-     "pos": "n.",
-     "en": "today"
+     "text": "今天",
+     "pron": "jīntiān",
+     "meaning": "today"
     },
     {
-     "zh": "号",
-     "pinyin": "hào",
-     "pos": "n.",
-     "en": "day of the month"
+     "text": "号",
+     "pron": "hào",
+     "meaning": "day of the month"
     },
     {
-     "zh": "月",
-     "pinyin": "yuè",
-     "pos": "n.",
-     "en": "month"
+     "text": "月",
+     "pron": "yuè",
+     "meaning": "month"
     },
     {
-     "zh": "星期",
-     "pinyin": "xīngqī",
-     "pos": "n.",
-     "en": "week"
+     "text": "星期",
+     "pron": "xīngqī",
+     "meaning": "week"
     },
     {
-     "zh": "昨天",
-     "pinyin": "zuótiān",
-     "pos": "n.",
-     "en": "yesterday"
+     "text": "昨天",
+     "pron": "zuótiān",
+     "meaning": "yesterday"
     },
     {
-     "zh": "明天",
-     "pinyin": "míngtiān",
-     "pos": "n.",
-     "en": "tomorrow"
+     "text": "明天",
+     "pron": "míngtiān",
+     "meaning": "tomorrow"
     },
     {
-     "zh": "去",
-     "pinyin": "qù",
-     "pos": "v.",
-     "en": "to go"
+     "text": "去",
+     "pron": "qù",
+     "meaning": "to go"
     },
     {
-     "zh": "学校",
-     "pinyin": "xuéxiào",
-     "pos": "n.",
-     "en": "school"
+     "text": "学校",
+     "pron": "xuéxiào",
+     "meaning": "school"
     },
     {
-     "zh": "看",
-     "pinyin": "kàn",
-     "pos": "v.",
-     "en": "to look, to watch, to read"
+     "text": "看",
+     "pron": "kàn",
+     "meaning": "to look, to watch, to read"
     },
     {
-     "zh": "书",
-     "pinyin": "shū",
-     "pos": "n.",
-     "en": "book"
+     "text": "书",
+     "pron": "shū",
+     "meaning": "book"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l7_date1",
@@ -928,14 +790,14 @@
      "pattern": "九月一号，星期三",
      "examples": [
       {
-       "zh": "今天几月几号？",
-       "pinyin": "Jīntiān jǐ yuè jǐ hào?",
-       "en": "What's the date today?"
+       "text": "今天几月几号？",
+       "pron": "Jīntiān jǐ yuè jǐ hào?",
+       "meaning": "What's the date today?"
       },
       {
-       "zh": "今天九月一号，星期三。",
-       "pinyin": "Jīntiān jiǔ yuè yī hào, xīngqīsān.",
-       "en": "Today is 1 September, Wednesday."
+       "text": "今天九月一号，星期三。",
+       "pron": "Jīntiān jiǔ yuè yī hào, xīngqīsān.",
+       "meaning": "Today is 1 September, Wednesday."
       }
      ],
      "requires": [
@@ -950,14 +812,14 @@
      "pattern": "明天星期六。",
      "examples": [
       {
-       "zh": "明天星期六。",
-       "pinyin": "Míngtiān xīngqīliù.",
-       "en": "Tomorrow is Saturday."
+       "text": "明天星期六。",
+       "pron": "Míngtiān xīngqīliù.",
+       "meaning": "Tomorrow is Saturday."
       },
       {
-       "zh": "昨天十号。",
-       "pinyin": "Zuótiān shí hào.",
-       "en": "Yesterday was the 10th."
+       "text": "昨天十号。",
+       "pron": "Zuótiān shí hào.",
+       "meaning": "Yesterday was the 10th."
       }
      ],
      "requires": [
@@ -972,14 +834,14 @@
      "pattern": "去 + place + verb",
      "examples": [
       {
-       "zh": "我去学校看书。",
-       "pinyin": "Wǒ qù xuéxiào kàn shū.",
-       "en": "I'm going to school to read."
+       "text": "我去学校看书。",
+       "pron": "Wǒ qù xuéxiào kàn shū.",
+       "meaning": "I'm going to school to read."
       },
       {
-       "zh": "明天我去中国。",
-       "pinyin": "Míngtiān wǒ qù Zhōngguó.",
-       "en": "Tomorrow I'm going to China."
+       "text": "明天我去中国。",
+       "pron": "Míngtiān wǒ qù Zhōngguó.",
+       "meaning": "Tomorrow I'm going to China."
       }
      ],
      "requires": []
@@ -988,102 +850,85 @@
   },
   {
    "id": 8,
-   "title_zh": "我想喝茶",
-   "title_en": "I'd like some tea",
-   "page": 56,
+   "title": "8 · 我想喝茶",
+   "title_learner": "I'd like some tea",
    "words": [
     {
-     "zh": "想",
-     "pinyin": "xiǎng",
-     "pos": "mod.",
-     "en": "to want, would like"
+     "text": "想",
+     "pron": "xiǎng",
+     "meaning": "to want, would like"
     },
     {
-     "zh": "喝",
-     "pinyin": "hē",
-     "pos": "v.",
-     "en": "to drink"
+     "text": "喝",
+     "pron": "hē",
+     "meaning": "to drink"
     },
     {
-     "zh": "茶",
-     "pinyin": "chá",
-     "pos": "n.",
-     "en": "tea"
+     "text": "茶",
+     "pron": "chá",
+     "meaning": "tea"
     },
     {
-     "zh": "吃",
-     "pinyin": "chī",
-     "pos": "v.",
-     "en": "to eat"
+     "text": "吃",
+     "pron": "chī",
+     "meaning": "to eat"
     },
     {
-     "zh": "米饭",
-     "pinyin": "mǐfàn",
-     "pos": "n.",
-     "en": "cooked rice"
+     "text": "米饭",
+     "pron": "mǐfàn",
+     "meaning": "cooked rice"
     },
     {
-     "zh": "下午",
-     "pinyin": "xiàwǔ",
-     "pos": "n.",
-     "en": "afternoon"
+     "text": "下午",
+     "pron": "xiàwǔ",
+     "meaning": "afternoon"
     },
     {
-     "zh": "商店",
-     "pinyin": "shāngdiàn",
-     "pos": "n.",
-     "en": "shop"
+     "text": "商店",
+     "pron": "shāngdiàn",
+     "meaning": "shop"
     },
     {
-     "zh": "买",
-     "pinyin": "mǎi",
-     "pos": "v.",
-     "en": "to buy"
+     "text": "买",
+     "pron": "mǎi",
+     "meaning": "to buy"
     },
     {
-     "zh": "个",
-     "pinyin": "gè",
-     "pos": "m.",
-     "en": "general measure word"
+     "text": "个",
+     "pron": "gè",
+     "meaning": "general measure word"
     },
     {
-     "zh": "杯子",
-     "pinyin": "bēizi",
-     "pos": "n.",
-     "en": "cup, glass"
+     "text": "杯子",
+     "pron": "bēizi",
+     "meaning": "cup, glass"
     },
     {
-     "zh": "这",
-     "pinyin": "zhè",
-     "pos": "pron.",
-     "en": "this"
+     "text": "这",
+     "pron": "zhè",
+     "meaning": "this"
     },
     {
-     "zh": "多少",
-     "pinyin": "duōshao",
-     "pos": "pron.",
-     "en": "how many, how much"
+     "text": "多少",
+     "pron": "duōshao",
+     "meaning": "how many, how much"
     },
     {
-     "zh": "钱",
-     "pinyin": "qián",
-     "pos": "n.",
-     "en": "money"
+     "text": "钱",
+     "pron": "qián",
+     "meaning": "money"
     },
     {
-     "zh": "块",
-     "pinyin": "kuài",
-     "pos": "m.",
-     "en": "yuan (money, spoken)"
+     "text": "块",
+     "pron": "kuài",
+     "meaning": "yuan (money, spoken)"
     },
     {
-     "zh": "那",
-     "pinyin": "nà",
-     "pos": "pron.",
-     "en": "that"
+     "text": "那",
+     "pron": "nà",
+     "meaning": "that"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l8_xiang",
@@ -1092,14 +937,14 @@
      "pattern": "我想 + verb",
      "examples": [
       {
-       "zh": "我想喝茶。",
-       "pinyin": "Wǒ xiǎng hē chá.",
-       "en": "I'd like some tea."
+       "text": "我想喝茶。",
+       "pron": "Wǒ xiǎng hē chá.",
+       "meaning": "I'd like some tea."
       },
       {
-       "zh": "你想吃什么？",
-       "pinyin": "Nǐ xiǎng chī shénme?",
-       "en": "What would you like to eat?"
+       "text": "你想吃什么？",
+       "pron": "Nǐ xiǎng chī shénme?",
+       "meaning": "What would you like to eat?"
       }
      ],
      "requires": [
@@ -1113,9 +958,9 @@
      "pattern": "……多少钱？",
      "examples": [
       {
-       "zh": "这个杯子多少钱？",
-       "pinyin": "Zhège bēizi duōshao qián?",
-       "en": "How much is this cup?"
+       "text": "这个杯子多少钱？",
+       "pron": "Zhège bēizi duōshao qián?",
+       "meaning": "How much is this cup?"
       }
      ],
      "requires": [
@@ -1130,14 +975,14 @@
      "pattern": "number / 这 / 那 + 个 + noun",
      "examples": [
       {
-       "zh": "三个杯子",
-       "pinyin": "sān ge bēizi",
-       "en": "three cups"
+       "text": "三个杯子",
+       "pron": "sān ge bēizi",
+       "meaning": "three cups"
       },
       {
-       "zh": "那个人是谁？",
-       "pinyin": "Nàge rén shì shéi?",
-       "en": "Who is that person?"
+       "text": "那个人是谁？",
+       "pron": "Nàge rén shì shéi?",
+       "meaning": "Who is that person?"
       }
      ],
      "requires": [
@@ -1152,9 +997,9 @@
      "pattern": "number + 块",
      "examples": [
       {
-       "zh": "那个杯子十五块。",
-       "pinyin": "Nàge bēizi shíwǔ kuài.",
-       "en": "That cup is 15 yuan."
+       "text": "那个杯子十五块。",
+       "pron": "Nàge bēizi shíwǔ kuài.",
+       "meaning": "That cup is 15 yuan."
       }
      ],
      "requires": [
@@ -1166,96 +1011,80 @@
   },
   {
    "id": 9,
-   "title_zh": "你儿子在哪儿工作",
-   "title_en": "Where does your son work",
-   "page": 64,
+   "title": "9 · 你儿子在哪儿工作",
+   "title_learner": "Where does your son work",
    "words": [
     {
-     "zh": "小",
-     "pinyin": "xiǎo",
-     "pos": "adj.",
-     "en": "small, little"
+     "text": "小",
+     "pron": "xiǎo",
+     "meaning": "small, little"
     },
     {
-     "zh": "猫",
-     "pinyin": "māo",
-     "pos": "n.",
-     "en": "cat"
+     "text": "猫",
+     "pron": "māo",
+     "meaning": "cat"
     },
     {
-     "zh": "在",
-     "pinyin": "zài",
-     "pos": "v./prep.",
-     "en": "to be at; at, in"
+     "text": "在",
+     "pron": "zài",
+     "meaning": "to be at; at, in"
     },
     {
-     "zh": "那儿",
-     "pinyin": "nàr",
-     "pos": "pron.",
-     "en": "there"
+     "text": "那儿",
+     "pron": "nàr",
+     "meaning": "there"
     },
     {
-     "zh": "狗",
-     "pinyin": "gǒu",
-     "pos": "n.",
-     "en": "dog"
+     "text": "狗",
+     "pron": "gǒu",
+     "meaning": "dog"
     },
     {
-     "zh": "椅子",
-     "pinyin": "yǐzi",
-     "pos": "n.",
-     "en": "chair"
+     "text": "椅子",
+     "pron": "yǐzi",
+     "meaning": "chair"
     },
     {
-     "zh": "下面",
-     "pinyin": "xiàmiàn",
-     "pos": "n.",
-     "en": "under, below"
+     "text": "下面",
+     "pron": "xiàmiàn",
+     "meaning": "under, below"
     },
     {
-     "zh": "下",
-     "pinyin": "xià",
-     "pos": "n.",
-     "en": "under, below"
+     "text": "下",
+     "pron": "xià",
+     "meaning": "under, below"
     },
     {
-     "zh": "哪儿",
-     "pinyin": "nǎr",
-     "pos": "pron.",
-     "en": "where"
+     "text": "哪儿",
+     "pron": "nǎr",
+     "meaning": "where"
     },
     {
-     "zh": "工作",
-     "pinyin": "gōngzuò",
-     "pos": "v./n.",
-     "en": "to work; job"
+     "text": "工作",
+     "pron": "gōngzuò",
+     "meaning": "to work; job"
     },
     {
-     "zh": "儿子",
-     "pinyin": "érzi",
-     "pos": "n.",
-     "en": "son"
+     "text": "儿子",
+     "pron": "érzi",
+     "meaning": "son"
     },
     {
-     "zh": "医院",
-     "pinyin": "yīyuàn",
-     "pos": "n.",
-     "en": "hospital"
+     "text": "医院",
+     "pron": "yīyuàn",
+     "meaning": "hospital"
     },
     {
-     "zh": "医生",
-     "pinyin": "yīshēng",
-     "pos": "n.",
-     "en": "doctor"
+     "text": "医生",
+     "pron": "yīshēng",
+     "meaning": "doctor"
     },
     {
-     "zh": "爸爸",
-     "pinyin": "bàba",
-     "pos": "n.",
-     "en": "father"
+     "text": "爸爸",
+     "pron": "bàba",
+     "meaning": "father"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l9_zai_verb",
@@ -1264,14 +1093,14 @@
      "pattern": "A 在 + place",
      "examples": [
       {
-       "zh": "小猫在椅子下面。",
-       "pinyin": "Xiǎo māo zài yǐzi xiàmiàn.",
-       "en": "The kitten is under the chair."
+       "text": "小猫在椅子下面。",
+       "pron": "Xiǎo māo zài yǐzi xiàmiàn.",
+       "meaning": "The kitten is under the chair."
       },
       {
-       "zh": "我的狗在那儿。",
-       "pinyin": "Wǒ de gǒu zài nàr.",
-       "en": "My dog is over there."
+       "text": "我的狗在那儿。",
+       "pron": "Wǒ de gǒu zài nàr.",
+       "meaning": "My dog is over there."
       }
      ],
      "requires": []
@@ -1283,9 +1112,9 @@
      "pattern": "……在哪儿？",
      "examples": [
       {
-       "zh": "你儿子在哪儿工作？",
-       "pinyin": "Nǐ érzi zài nǎr gōngzuò?",
-       "en": "Where does your son work?"
+       "text": "你儿子在哪儿工作？",
+       "pron": "Nǐ érzi zài nǎr gōngzuò?",
+       "meaning": "Where does your son work?"
       }
      ],
      "requires": [
@@ -1299,14 +1128,14 @@
      "pattern": "在 + place + verb",
      "examples": [
       {
-       "zh": "他在医院工作。",
-       "pinyin": "Tā zài yīyuàn gōngzuò.",
-       "en": "He works at a hospital."
+       "text": "他在医院工作。",
+       "pron": "Tā zài yīyuàn gōngzuò.",
+       "meaning": "He works at a hospital."
       },
       {
-       "zh": "我爸爸是医生。",
-       "pinyin": "Wǒ bàba shì yīshēng.",
-       "en": "My father is a doctor."
+       "text": "我爸爸是医生。",
+       "pron": "Wǒ bàba shì yīshēng.",
+       "meaning": "My father is a doctor."
       }
      ],
      "requires": [
@@ -1320,9 +1149,9 @@
      "pattern": "noun + 呢？",
      "examples": [
       {
-       "zh": "我的猫呢？",
-       "pinyin": "Wǒ de māo ne?",
-       "en": "Where's my cat?"
+       "text": "我的猫呢？",
+       "pron": "Wǒ de māo ne?",
+       "meaning": "Where's my cat?"
       }
      ],
      "requires": [
@@ -1334,101 +1163,83 @@
   },
   {
    "id": 10,
-   "title_zh": "我能坐这儿吗",
-   "title_en": "Can I sit here",
-   "page": 72,
+   "title": "10 · 我能坐这儿吗",
+   "title_learner": "Can I sit here",
    "words": [
     {
-     "zh": "桌子",
-     "pinyin": "zhuōzi",
-     "pos": "n.",
-     "en": "table, desk"
+     "text": "桌子",
+     "pron": "zhuōzi",
+     "meaning": "table, desk"
     },
     {
-     "zh": "上",
-     "pinyin": "shang",
-     "pos": "n.",
-     "en": "on, above"
+     "text": "上",
+     "pron": "shang",
+     "meaning": "on, above"
     },
     {
-     "zh": "电脑",
-     "pinyin": "diànnǎo",
-     "pos": "n.",
-     "en": "computer"
+     "text": "电脑",
+     "pron": "diànnǎo",
+     "meaning": "computer"
     },
     {
-     "zh": "和",
-     "pinyin": "hé",
-     "pos": "conj.",
-     "en": "and"
+     "text": "和",
+     "pron": "hé",
+     "meaning": "and"
     },
     {
-     "zh": "本",
-     "pinyin": "běn",
-     "pos": "m.",
-     "en": "measure word for books"
+     "text": "本",
+     "pron": "běn",
+     "meaning": "measure word for books"
     },
     {
-     "zh": "里",
-     "pinyin": "li",
-     "pos": "n.",
-     "en": "in, inside"
+     "text": "里",
+     "pron": "li",
+     "meaning": "in, inside"
     },
     {
-     "zh": "前面",
-     "pinyin": "qiánmiàn",
-     "pos": "n.",
-     "en": "in front"
+     "text": "前面",
+     "pron": "qiánmiàn",
+     "meaning": "in front"
     },
     {
-     "zh": "后面",
-     "pinyin": "hòumiàn",
-     "pos": "n.",
-     "en": "behind"
+     "text": "后面",
+     "pron": "hòumiàn",
+     "meaning": "behind"
     },
     {
-     "zh": "这儿",
-     "pinyin": "zhèr",
-     "pos": "pron.",
-     "en": "here"
+     "text": "这儿",
+     "pron": "zhèr",
+     "meaning": "here"
     },
     {
-     "zh": "没有",
-     "pinyin": "méiyǒu",
-     "pos": "v./adv.",
-     "en": "not have; there is not"
+     "text": "没有",
+     "pron": "méiyǒu",
+     "meaning": "not have; there is not"
     },
     {
-     "zh": "没",
-     "pinyin": "méi",
-     "pos": "adv.",
-     "en": "not (have)"
+     "text": "没",
+     "pron": "méi",
+     "meaning": "not (have)"
     },
     {
-     "zh": "能",
-     "pinyin": "néng",
-     "pos": "mod.",
-     "en": "can, may"
+     "text": "能",
+     "pron": "néng",
+     "meaning": "can, may"
     },
     {
-     "zh": "坐",
-     "pinyin": "zuò",
-     "pos": "v.",
-     "en": "to sit"
-    }
-   ],
-   "proper_nouns": [
-    {
-     "zh": "王方",
-     "pinyin": "Wáng Fāng",
-     "pos": "name",
-     "en": "Wang Fang (a person)"
+     "text": "坐",
+     "pron": "zuò",
+     "meaning": "to sit"
     },
     {
-     "zh": "谢朋",
-     "pinyin": "Xiè Péng",
-     "pos": "name",
-     "en": "Xie Peng (a person)"
+     "text": "王方",
+     "pron": "Wáng Fāng",
+     "meaning": "Wang Fang (a person)"
+    },
+    {
+     "text": "谢朋",
+     "pron": "Xiè Péng",
+     "meaning": "Xie Peng (a person)"
     }
    ],
    "grammar": [
@@ -1439,14 +1250,14 @@
      "pattern": "place + 有 + thing",
      "examples": [
       {
-       "zh": "桌子上有一个电脑。",
-       "pinyin": "Zhuōzi shang yǒu yí ge diànnǎo.",
-       "en": "There is a computer on the table."
+       "text": "桌子上有一个电脑。",
+       "pron": "Zhuōzi shang yǒu yí ge diànnǎo.",
+       "meaning": "There is a computer on the table."
       },
       {
-       "zh": "杯子里没有茶。",
-       "pinyin": "Bēizi li méiyǒu chá.",
-       "en": "There's no tea in the cup."
+       "text": "杯子里没有茶。",
+       "pron": "Bēizi li méiyǒu chá.",
+       "meaning": "There's no tea in the cup."
       }
      ],
      "requires": [
@@ -1462,9 +1273,9 @@
      "pattern": "A 和 B",
      "examples": [
       {
-       "zh": "桌子上有电脑和书。",
-       "pinyin": "Zhuōzi shang yǒu diànnǎo hé shū.",
-       "en": "There's a computer and books on the table."
+       "text": "桌子上有电脑和书。",
+       "pron": "Zhuōzi shang yǒu diànnǎo hé shū.",
+       "meaning": "There's a computer and books on the table."
       }
      ],
      "requires": [
@@ -1478,9 +1289,9 @@
      "pattern": "我能 + verb + 吗？",
      "examples": [
       {
-       "zh": "我能坐这儿吗？",
-       "pinyin": "Wǒ néng zuò zhèr ma?",
-       "en": "Can I sit here?"
+       "text": "我能坐这儿吗？",
+       "pron": "Wǒ néng zuò zhèr ma?",
+       "meaning": "Can I sit here?"
       }
      ],
      "requires": [
@@ -1495,14 +1306,14 @@
      "pattern": "请 + verb",
      "examples": [
       {
-       "zh": "请坐！",
-       "pinyin": "Qǐng zuò!",
-       "en": "Please sit down!"
+       "text": "请坐！",
+       "pron": "Qǐng zuò!",
+       "meaning": "Please sit down!"
       },
       {
-       "zh": "请喝茶。",
-       "pinyin": "Qǐng hē chá.",
-       "en": "Please have some tea."
+       "text": "请喝茶。",
+       "pron": "Qǐng hē chá.",
+       "meaning": "Please have some tea."
       }
      ],
      "requires": []
@@ -1511,83 +1322,68 @@
   },
   {
    "id": 11,
-   "title_zh": "现在几点",
-   "title_en": "What's the time now",
-   "page": 82,
+   "title": "11 · 现在几点",
+   "title_learner": "What's the time now",
    "words": [
     {
-     "zh": "现在",
-     "pinyin": "xiànzài",
-     "pos": "n.",
-     "en": "now"
+     "text": "现在",
+     "pron": "xiànzài",
+     "meaning": "now"
     },
     {
-     "zh": "点",
-     "pinyin": "diǎn",
-     "pos": "m.",
-     "en": "o'clock"
+     "text": "点",
+     "pron": "diǎn",
+     "meaning": "o'clock"
     },
     {
-     "zh": "分",
-     "pinyin": "fēn",
-     "pos": "m.",
-     "en": "minute"
+     "text": "分",
+     "pron": "fēn",
+     "meaning": "minute"
     },
     {
-     "zh": "中午",
-     "pinyin": "zhōngwǔ",
-     "pos": "n.",
-     "en": "noon"
+     "text": "中午",
+     "pron": "zhōngwǔ",
+     "meaning": "noon"
     },
     {
-     "zh": "吃饭",
-     "pinyin": "chī fàn",
-     "pos": "v.",
-     "en": "to eat a meal"
+     "text": "吃饭",
+     "pron": "chī fàn",
+     "meaning": "to eat a meal"
     },
     {
-     "zh": "时候",
-     "pinyin": "shíhou",
-     "pos": "n.",
-     "en": "time, moment"
+     "text": "时候",
+     "pron": "shíhou",
+     "meaning": "time, moment"
     },
     {
-     "zh": "回",
-     "pinyin": "huí",
-     "pos": "v.",
-     "en": "to go/come back"
+     "text": "回",
+     "pron": "huí",
+     "meaning": "to go/come back"
     },
     {
-     "zh": "我们",
-     "pinyin": "wǒmen",
-     "pos": "pron.",
-     "en": "we, us"
+     "text": "我们",
+     "pron": "wǒmen",
+     "meaning": "we, us"
     },
     {
-     "zh": "电影",
-     "pinyin": "diànyǐng",
-     "pos": "n.",
-     "en": "film, movie"
+     "text": "电影",
+     "pron": "diànyǐng",
+     "meaning": "film, movie"
     },
     {
-     "zh": "住",
-     "pinyin": "zhù",
-     "pos": "v.",
-     "en": "to live, to stay"
+     "text": "住",
+     "pron": "zhù",
+     "meaning": "to live, to stay"
     },
     {
-     "zh": "前",
-     "pinyin": "qián",
-     "pos": "n.",
-     "en": "before"
-    }
-   ],
-   "proper_nouns": [
+     "text": "前",
+     "pron": "qián",
+     "meaning": "before"
+    },
     {
-     "zh": "北京",
-     "pinyin": "Běijīng",
-     "pos": "name",
-     "en": "Beijing"
+     "text": "北京",
+     "pron": "Běijīng",
+     "meaning": "Beijing"
     }
    ],
    "grammar": [
@@ -1598,14 +1394,14 @@
      "pattern": "……点……分",
      "examples": [
       {
-       "zh": "现在几点？",
-       "pinyin": "Xiànzài jǐ diǎn?",
-       "en": "What time is it now?"
+       "text": "现在几点？",
+       "pron": "Xiànzài jǐ diǎn?",
+       "meaning": "What time is it now?"
       },
       {
-       "zh": "现在十点十分。",
-       "pinyin": "Xiànzài shí diǎn shí fēn.",
-       "en": "It's 10:10 now."
+       "text": "现在十点十分。",
+       "pron": "Xiànzài shí diǎn shí fēn.",
+       "meaning": "It's 10:10 now."
       }
      ],
      "requires": [
@@ -1620,14 +1416,14 @@
      "pattern": "subject + time + verb",
      "examples": [
       {
-       "zh": "我中午十二点吃饭。",
-       "pinyin": "Wǒ zhōngwǔ shí'èr diǎn chī fàn.",
-       "en": "I eat at 12 noon."
+       "text": "我中午十二点吃饭。",
+       "pron": "Wǒ zhōngwǔ shí'èr diǎn chī fàn.",
+       "meaning": "I eat at 12 noon."
       },
       {
-       "zh": "我们下午三点去看电影。",
-       "pinyin": "Wǒmen xiàwǔ sān diǎn qù kàn diànyǐng.",
-       "en": "We're going to see a film at 3 pm."
+       "text": "我们下午三点去看电影。",
+       "pron": "Wǒmen xiàwǔ sān diǎn qù kàn diànyǐng.",
+       "meaning": "We're going to see a film at 3 pm."
       }
      ],
      "requires": [
@@ -1642,9 +1438,9 @@
      "pattern": "time + 前",
      "examples": [
       {
-       "zh": "我五点前回家。",
-       "pinyin": "Wǒ wǔ diǎn qián huí jiā.",
-       "en": "I'll be home before five."
+       "text": "我五点前回家。",
+       "pron": "Wǒ wǔ diǎn qián huí jiā.",
+       "meaning": "I'll be home before five."
       }
      ],
      "requires": [
@@ -1655,97 +1451,81 @@
   },
   {
    "id": 12,
-   "title_zh": "明天天气怎么样",
-   "title_en": "What will the weather be like tomorrow",
-   "page": 90,
+   "title": "12 · 明天天气怎么样",
+   "title_learner": "What will the weather be like tomorrow",
    "words": [
     {
-     "zh": "天气",
-     "pinyin": "tiānqì",
-     "pos": "n.",
-     "en": "weather"
+     "text": "天气",
+     "pron": "tiānqì",
+     "meaning": "weather"
     },
     {
-     "zh": "怎么样",
-     "pinyin": "zěnmeyàng",
-     "pos": "pron.",
-     "en": "how (is it)?"
+     "text": "怎么样",
+     "pron": "zěnmeyàng",
+     "meaning": "how (is it)?"
     },
     {
-     "zh": "太",
-     "pinyin": "tài",
-     "pos": "adv.",
-     "en": "too"
+     "text": "太",
+     "pron": "tài",
+     "meaning": "too"
     },
     {
-     "zh": "热",
-     "pinyin": "rè",
-     "pos": "adj.",
-     "en": "hot"
+     "text": "热",
+     "pron": "rè",
+     "meaning": "hot"
     },
     {
-     "zh": "冷",
-     "pinyin": "lěng",
-     "pos": "adj.",
-     "en": "cold"
+     "text": "冷",
+     "pron": "lěng",
+     "meaning": "cold"
     },
     {
-     "zh": "下雨",
-     "pinyin": "xià yǔ",
-     "pos": "v.",
-     "en": "to rain"
+     "text": "下雨",
+     "pron": "xià yǔ",
+     "meaning": "to rain"
     },
     {
-     "zh": "雨",
-     "pinyin": "yǔ",
-     "pos": "n.",
-     "en": "rain"
+     "text": "雨",
+     "pron": "yǔ",
+     "meaning": "rain"
     },
     {
-     "zh": "小姐",
-     "pinyin": "xiǎojiě",
-     "pos": "n.",
-     "en": "Miss, young lady"
+     "text": "小姐",
+     "pron": "xiǎojiě",
+     "meaning": "Miss, young lady"
     },
     {
-     "zh": "来",
-     "pinyin": "lái",
-     "pos": "v.",
-     "en": "to come"
+     "text": "来",
+     "pron": "lái",
+     "meaning": "to come"
     },
     {
-     "zh": "身体",
-     "pinyin": "shēntǐ",
-     "pos": "n.",
-     "en": "body, health",
-     "beyond_syllabus": true
+     "text": "身体",
+     "pron": "shēntǐ",
+     "meaning": "body, health",
+     "extra": true
     },
     {
-     "zh": "爱",
-     "pinyin": "ài",
-     "pos": "v.",
-     "en": "to love, to like"
+     "text": "爱",
+     "pron": "ài",
+     "meaning": "to love, to like"
     },
     {
-     "zh": "些",
-     "pinyin": "xiē",
-     "pos": "m.",
-     "en": "some"
+     "text": "些",
+     "pron": "xiē",
+     "meaning": "some"
     },
     {
-     "zh": "水果",
-     "pinyin": "shuǐguǒ",
-     "pos": "n.",
-     "en": "fruit"
+     "text": "水果",
+     "pron": "shuǐguǒ",
+     "meaning": "fruit"
     },
     {
-     "zh": "水",
-     "pinyin": "shuǐ",
-     "pos": "n.",
-     "en": "water"
+     "text": "水",
+     "pron": "shuǐ",
+     "meaning": "water"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l12_zenmeyang",
@@ -1754,9 +1534,9 @@
      "pattern": "……怎么样？",
      "examples": [
       {
-       "zh": "明天天气怎么样？",
-       "pinyin": "Míngtiān tiānqì zěnmeyàng?",
-       "en": "What will the weather be like tomorrow?"
+       "text": "明天天气怎么样？",
+       "pron": "Míngtiān tiānqì zěnmeyàng?",
+       "meaning": "What will the weather be like tomorrow?"
       }
      ],
      "requires": [
@@ -1770,14 +1550,14 @@
      "pattern": "topic + subject + 很 + adjective",
      "examples": [
       {
-       "zh": "我身体很好。",
-       "pinyin": "Wǒ shēntǐ hěn hǎo.",
-       "en": "I'm in good health."
+       "text": "我身体很好。",
+       "pron": "Wǒ shēntǐ hěn hǎo.",
+       "meaning": "I'm in good health."
       },
       {
-       "zh": "北京天气很冷。",
-       "pinyin": "Běijīng tiānqì hěn lěng.",
-       "en": "Beijing's weather is cold."
+       "text": "北京天气很冷。",
+       "pron": "Běijīng tiānqì hěn lěng.",
+       "meaning": "Beijing's weather is cold."
       }
      ],
      "requires": [
@@ -1791,9 +1571,9 @@
      "pattern": "太 + adjective + 了",
      "examples": [
       {
-       "zh": "今天太热了！",
-       "pinyin": "Jīntiān tài rè le!",
-       "en": "It's too hot today!"
+       "text": "今天太热了！",
+       "pron": "Jīntiān tài rè le!",
+       "meaning": "It's too hot today!"
       }
      ],
      "requires": [
@@ -1807,14 +1587,14 @@
      "pattern": "会 + verb",
      "examples": [
       {
-       "zh": "明天会下雨吗？",
-       "pinyin": "Míngtiān huì xià yǔ ma?",
-       "en": "Will it rain tomorrow?"
+       "text": "明天会下雨吗？",
+       "pron": "Míngtiān huì xià yǔ ma?",
+       "meaning": "Will it rain tomorrow?"
       },
       {
-       "zh": "明天不会下雨。",
-       "pinyin": "Míngtiān bú huì xià yǔ.",
-       "en": "It won't rain tomorrow."
+       "text": "明天不会下雨。",
+       "pron": "Míngtiān bú huì xià yǔ.",
+       "meaning": "It won't rain tomorrow."
       }
      ],
      "requires": [
@@ -1826,86 +1606,71 @@
   },
   {
    "id": 13,
-   "title_zh": "他在学做中国菜呢",
-   "title_en": "He is learning to cook Chinese food",
-   "page": 98,
+   "title": "13 · 他在学做中国菜呢",
+   "title_learner": "He is learning to cook Chinese food",
    "words": [
     {
-     "zh": "喂",
-     "pinyin": "wèi",
-     "pos": "int.",
-     "en": "hello (on the phone)"
+     "text": "喂",
+     "pron": "wèi",
+     "meaning": "hello (on the phone)"
     },
     {
-     "zh": "也",
-     "pinyin": "yě",
-     "pos": "adv.",
-     "en": "also, too",
-     "beyond_syllabus": true
+     "text": "也",
+     "pron": "yě",
+     "meaning": "also, too",
+     "extra": true
     },
     {
-     "zh": "学习",
-     "pinyin": "xuéxí",
-     "pos": "v.",
-     "en": "to study"
+     "text": "学习",
+     "pron": "xuéxí",
+     "meaning": "to study"
     },
     {
-     "zh": "学",
-     "pinyin": "xué",
-     "pos": "v.",
-     "en": "to learn"
+     "text": "学",
+     "pron": "xué",
+     "meaning": "to learn"
     },
     {
-     "zh": "上午",
-     "pinyin": "shàngwǔ",
-     "pos": "n.",
-     "en": "morning"
+     "text": "上午",
+     "pron": "shàngwǔ",
+     "meaning": "morning"
     },
     {
-     "zh": "睡觉",
-     "pinyin": "shuì jiào",
-     "pos": "v.",
-     "en": "to sleep"
+     "text": "睡觉",
+     "pron": "shuì jiào",
+     "meaning": "to sleep"
     },
     {
-     "zh": "电视",
-     "pinyin": "diànshì",
-     "pos": "n.",
-     "en": "television"
+     "text": "电视",
+     "pron": "diànshì",
+     "meaning": "television"
     },
     {
-     "zh": "喜欢",
-     "pinyin": "xǐhuan",
-     "pos": "v.",
-     "en": "to like"
+     "text": "喜欢",
+     "pron": "xǐhuan",
+     "meaning": "to like"
     },
     {
-     "zh": "给",
-     "pinyin": "gěi",
-     "pos": "prep.",
-     "en": "to, for",
-     "beyond_syllabus": true
+     "text": "给",
+     "pron": "gěi",
+     "meaning": "to, for",
+     "extra": true
     },
     {
-     "zh": "打电话",
-     "pinyin": "dǎ diànhuà",
-     "pos": "v.",
-     "en": "to make a phone call"
+     "text": "打电话",
+     "pron": "dǎ diànhuà",
+     "meaning": "to make a phone call"
     },
     {
-     "zh": "吧",
-     "pinyin": "ba",
-     "pos": "part.",
-     "en": "suggestion / checking particle",
-     "beyond_syllabus": true
-    }
-   ],
-   "proper_nouns": [
+     "text": "吧",
+     "pron": "ba",
+     "meaning": "suggestion / checking particle",
+     "extra": true
+    },
     {
-     "zh": "大卫",
-     "pinyin": "Dàwèi",
-     "pos": "name",
-     "en": "David"
+     "text": "大卫",
+     "pron": "Dàwèi",
+     "meaning": "David"
     }
    ],
    "grammar": [
@@ -1916,9 +1681,9 @@
      "pattern": "喂，你好！",
      "examples": [
       {
-       "zh": "喂，你好！",
-       "pinyin": "Wèi, nǐ hǎo!",
-       "en": "Hello? (on the phone)"
+       "text": "喂，你好！",
+       "pron": "Wèi, nǐ hǎo!",
+       "meaning": "Hello? (on the phone)"
       }
      ],
      "requires": [
@@ -1932,14 +1697,14 @@
      "pattern": "subject + 在 + verb + 呢",
      "examples": [
       {
-       "zh": "你在做什么呢？",
-       "pinyin": "Nǐ zài zuò shénme ne?",
-       "en": "What are you doing?"
+       "text": "你在做什么呢？",
+       "pron": "Nǐ zài zuò shénme ne?",
+       "meaning": "What are you doing?"
       },
       {
-       "zh": "我在看电视呢。",
-       "pinyin": "Wǒ zài kàn diànshì ne.",
-       "en": "I'm watching TV."
+       "text": "我在看电视呢。",
+       "pron": "Wǒ zài kàn diànshì ne.",
+       "meaning": "I'm watching TV."
       }
      ],
      "requires": [
@@ -1953,9 +1718,9 @@
      "pattern": "你的电话是多少？",
      "examples": [
       {
-       "zh": "你的电话是多少？",
-       "pinyin": "Nǐ de diànhuà shì duōshao?",
-       "en": "What's your phone number?"
+       "text": "你的电话是多少？",
+       "pron": "Nǐ de diànhuà shì duōshao?",
+       "meaning": "What's your phone number?"
       }
      ],
      "requires": [
@@ -1970,14 +1735,14 @@
      "pattern": "……吧",
      "examples": [
       {
-       "zh": "我们去看电影吧。",
-       "pinyin": "Wǒmen qù kàn diànyǐng ba.",
-       "en": "Let's go and see a film."
+       "text": "我们去看电影吧。",
+       "pron": "Wǒmen qù kàn diànyǐng ba.",
+       "meaning": "Let's go and see a film."
       },
       {
-       "zh": "你是大卫吧？",
-       "pinyin": "Nǐ shì Dàwèi ba?",
-       "en": "You're David, right?"
+       "text": "你是大卫吧？",
+       "pron": "Nǐ shì Dàwèi ba?",
+       "meaning": "You're David, right?"
       }
      ],
      "requires": [
@@ -1988,120 +1753,99 @@
   },
   {
    "id": 14,
-   "title_zh": "她买了不少衣服",
-   "title_en": "She has bought quite a few clothes",
-   "page": 104,
+   "title": "14 · 她买了不少衣服",
+   "title_learner": "She has bought quite a few clothes",
    "words": [
     {
-     "zh": "东西",
-     "pinyin": "dōngxi",
-     "pos": "n.",
-     "en": "thing, stuff"
+     "text": "东西",
+     "pron": "dōngxi",
+     "meaning": "thing, stuff"
     },
     {
-     "zh": "一点儿",
-     "pinyin": "yìdiǎnr",
-     "pos": "num.-m.",
-     "en": "a little"
+     "text": "一点儿",
+     "pron": "yìdiǎnr",
+     "meaning": "a little"
     },
     {
-     "zh": "苹果",
-     "pinyin": "píngguǒ",
-     "pos": "n.",
-     "en": "apple"
+     "text": "苹果",
+     "pron": "píngguǒ",
+     "meaning": "apple"
     },
     {
-     "zh": "看见",
-     "pinyin": "kànjiàn",
-     "pos": "v.",
-     "en": "to see"
+     "text": "看见",
+     "pron": "kànjiàn",
+     "meaning": "to see"
     },
     {
-     "zh": "先生",
-     "pinyin": "xiānsheng",
-     "pos": "n.",
-     "en": "Mr., sir"
+     "text": "先生",
+     "pron": "xiānsheng",
+     "meaning": "Mr., sir"
     },
     {
-     "zh": "开",
-     "pinyin": "kāi",
-     "pos": "v.",
-     "en": "to drive"
+     "text": "开",
+     "pron": "kāi",
+     "meaning": "to drive"
     },
     {
-     "zh": "车",
-     "pinyin": "chē",
-     "pos": "n.",
-     "en": "car"
+     "text": "车",
+     "pron": "chē",
+     "meaning": "car"
     },
     {
-     "zh": "回来",
-     "pinyin": "huílai",
-     "pos": "v.",
-     "en": "to come back"
+     "text": "回来",
+     "pron": "huílai",
+     "meaning": "to come back"
     },
     {
-     "zh": "分钟",
-     "pinyin": "fēnzhōng",
-     "pos": "n.",
-     "en": "minute"
+     "text": "分钟",
+     "pron": "fēnzhōng",
+     "meaning": "minute"
     },
     {
-     "zh": "后",
-     "pinyin": "hòu",
-     "pos": "n.",
-     "en": "after, later"
+     "text": "后",
+     "pron": "hòu",
+     "meaning": "after, later"
     },
     {
-     "zh": "衣服",
-     "pinyin": "yīfu",
-     "pos": "n.",
-     "en": "clothes"
+     "text": "衣服",
+     "pron": "yīfu",
+     "meaning": "clothes"
     },
     {
-     "zh": "漂亮",
-     "pinyin": "piàoliang",
-     "pos": "adj.",
-     "en": "beautiful"
+     "text": "漂亮",
+     "pron": "piàoliang",
+     "meaning": "beautiful"
     },
     {
-     "zh": "啊",
-     "pinyin": "a",
-     "pos": "part.",
-     "en": "friendly / emphasis particle",
-     "beyond_syllabus": true
+     "text": "啊",
+     "pron": "a",
+     "meaning": "friendly / emphasis particle",
+     "extra": true
     },
     {
-     "zh": "少",
-     "pinyin": "shǎo",
-     "pos": "adj.",
-     "en": "few, little"
+     "text": "少",
+     "pron": "shǎo",
+     "meaning": "few, little"
     },
     {
-     "zh": "不少",
-     "pinyin": "bùshǎo",
-     "pos": "adj.",
-     "en": "quite a few"
+     "text": "不少",
+     "pron": "bùshǎo",
+     "meaning": "quite a few"
     },
     {
-     "zh": "这些",
-     "pinyin": "zhèxiē",
-     "pos": "pron.",
-     "en": "these"
+     "text": "这些",
+     "pron": "zhèxiē",
+     "meaning": "these"
     },
     {
-     "zh": "都",
-     "pinyin": "dōu",
-     "pos": "adv.",
-     "en": "all, both"
-    }
-   ],
-   "proper_nouns": [
+     "text": "都",
+     "pron": "dōu",
+     "meaning": "all, both"
+    },
     {
-     "zh": "张",
-     "pinyin": "Zhāng",
-     "pos": "name",
-     "en": "Zhang (family name)"
+     "text": "张",
+     "pron": "Zhāng",
+     "meaning": "Zhang (family name)"
     }
    ],
    "grammar": [
@@ -2112,14 +1856,14 @@
      "pattern": "verb + 了 / 没 + verb",
      "examples": [
       {
-       "zh": "她买了不少衣服。",
-       "pinyin": "Tā mǎile bùshǎo yīfu.",
-       "en": "She bought quite a few clothes."
+       "text": "她买了不少衣服。",
+       "pron": "Tā mǎile bùshǎo yīfu.",
+       "meaning": "She bought quite a few clothes."
       },
       {
-       "zh": "我没看见你的猫。",
-       "pinyin": "Wǒ méi kànjiàn nǐ de māo.",
-       "en": "I didn't see your cat."
+       "text": "我没看见你的猫。",
+       "pron": "Wǒ méi kànjiàn nǐ de māo.",
+       "meaning": "I didn't see your cat."
       }
      ],
      "requires": [
@@ -2134,9 +1878,9 @@
      "pattern": "time + 后",
      "examples": [
       {
-       "zh": "我五分钟后回来。",
-       "pinyin": "Wǒ wǔ fēnzhōng hòu huílai.",
-       "en": "I'll be back in five minutes."
+       "text": "我五分钟后回来。",
+       "pron": "Wǒ wǔ fēnzhōng hòu huílai.",
+       "meaning": "I'll be back in five minutes."
       }
      ],
      "requires": [
@@ -2150,14 +1894,14 @@
      "pattern": "……啊",
      "examples": [
       {
-       "zh": "好啊！",
-       "pinyin": "Hǎo a!",
-       "en": "OK, sure!"
+       "text": "好啊！",
+       "pron": "Hǎo a!",
+       "meaning": "OK, sure!"
       },
       {
-       "zh": "这些衣服很漂亮啊！",
-       "pinyin": "Zhèxiē yīfu hěn piàoliang a!",
-       "en": "These clothes are really pretty!"
+       "text": "这些衣服很漂亮啊！",
+       "pron": "Zhèxiē yīfu hěn piàoliang a!",
+       "meaning": "These clothes are really pretty!"
       }
      ],
      "requires": [
@@ -2171,14 +1915,14 @@
      "pattern": "subject (plural) + 都 + verb",
      "examples": [
       {
-       "zh": "我们都是学生。",
-       "pinyin": "Wǒmen dōu shì xuésheng.",
-       "en": "We are all students."
+       "text": "我们都是学生。",
+       "pron": "Wǒmen dōu shì xuésheng.",
+       "meaning": "We are all students."
       },
       {
-       "zh": "这些都是我的书。",
-       "pinyin": "Zhèxiē dōu shì wǒ de shū.",
-       "en": "These are all my books."
+       "text": "这些都是我的书。",
+       "pron": "Zhèxiē dōu shì wǒ de shū.",
+       "meaning": "These are all my books."
       }
      ],
      "requires": [
@@ -2189,67 +1933,56 @@
   },
   {
    "id": 15,
-   "title_zh": "我是坐飞机来的",
-   "title_en": "I came here by air",
-   "page": 112,
+   "title": "15 · 我是坐飞机来的",
+   "title_learner": "I came here by air",
    "words": [
     {
-     "zh": "认识",
-     "pinyin": "rènshi",
-     "pos": "v.",
-     "en": "to know (a person), to meet"
+     "text": "认识",
+     "pron": "rènshi",
+     "meaning": "to know (a person), to meet"
     },
     {
-     "zh": "年",
-     "pinyin": "nián",
-     "pos": "n.",
-     "en": "year"
+     "text": "年",
+     "pron": "nián",
+     "meaning": "year"
     },
     {
-     "zh": "大学",
-     "pinyin": "dàxué",
-     "pos": "n.",
-     "en": "university"
+     "text": "大学",
+     "pron": "dàxué",
+     "meaning": "university"
     },
     {
-     "zh": "饭店",
-     "pinyin": "fàndiàn",
-     "pos": "n.",
-     "en": "hotel, restaurant"
+     "text": "饭店",
+     "pron": "fàndiàn",
+     "meaning": "hotel, restaurant"
     },
     {
-     "zh": "出租车",
-     "pinyin": "chūzūchē",
-     "pos": "n.",
-     "en": "taxi"
+     "text": "出租车",
+     "pron": "chūzūchē",
+     "meaning": "taxi"
     },
     {
-     "zh": "一起",
-     "pinyin": "yìqǐ",
-     "pos": "adv.",
-     "en": "together",
-     "beyond_syllabus": true
+     "text": "一起",
+     "pron": "yìqǐ",
+     "meaning": "together",
+     "extra": true
     },
     {
-     "zh": "高兴",
-     "pinyin": "gāoxìng",
-     "pos": "adj.",
-     "en": "happy, glad"
+     "text": "高兴",
+     "pron": "gāoxìng",
+     "meaning": "happy, glad"
     },
     {
-     "zh": "听",
-     "pinyin": "tīng",
-     "pos": "v.",
-     "en": "to listen"
+     "text": "听",
+     "pron": "tīng",
+     "meaning": "to listen"
     },
     {
-     "zh": "飞机",
-     "pinyin": "fēijī",
-     "pos": "n.",
-     "en": "airplane"
+     "text": "飞机",
+     "pron": "fēijī",
+     "meaning": "airplane"
     }
    ],
-   "proper_nouns": [],
    "grammar": [
     {
      "id": "l15_shi_de",
@@ -2258,14 +1991,14 @@
      "pattern": "是 + time/place/way + verb + 的",
      "examples": [
       {
-       "zh": "我是坐飞机来的。",
-       "pinyin": "Wǒ shì zuò fēijī lái de.",
-       "en": "I came by plane."
+       "text": "我是坐飞机来的。",
+       "pron": "Wǒ shì zuò fēijī lái de.",
+       "meaning": "I came by plane."
       },
       {
-       "zh": "你是什么时候来北京的？",
-       "pinyin": "Nǐ shì shénme shíhou lái Běijīng de?",
-       "en": "When did you come to Beijing?"
+       "text": "你是什么时候来北京的？",
+       "pron": "Nǐ shì shénme shíhou lái Běijīng de?",
+       "meaning": "When did you come to Beijing?"
       }
      ],
      "requires": [
@@ -2280,9 +2013,9 @@
      "pattern": "……年……月……号，星期……",
      "examples": [
       {
-       "zh": "今天是二〇二六年九月一号，星期二。",
-       "pinyin": "Jīntiān shì èr líng èr liù nián jiǔ yuè yī hào, xīngqī'èr.",
-       "en": "Today is Tuesday, 1 September 2026."
+       "text": "今天是二〇二六年九月一号，星期二。",
+       "pron": "Jīntiān shì èr líng èr liù nián jiǔ yuè yī hào, xīngqī'èr.",
+       "meaning": "Today is Tuesday, 1 September 2026."
       }
      ],
      "requires": [

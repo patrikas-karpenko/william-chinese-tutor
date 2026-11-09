@@ -4,11 +4,15 @@ const chat = document.getElementById("chat");
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const cat = document.getElementById("cat");
+const bubble = document.getElementById("bubble");
 const button = form.querySelector("button");
+const courseSelect = document.getElementById("course");
 const lessonSelect = document.getElementById("lesson");
 
+let ui = {};   // the words on the page (buttons, headings) in the course's language
+
 // 1. Draw William
-const EYES = { normal: "o   o", happy: "^   ^", think: "-   o" };
+const EYES = { normal: "o   o", happy: "^   ^", think: "-   o", wink: "^   -" };
 
 function drawCat(mood) {
   cat.textContent = [
@@ -24,7 +28,25 @@ function drawCat(mood) {
 
 drawCat("normal");
 
-// 2. Put a message on the screen
+// 2. William's tricks: a speech bubble and a flip
+function say(text, ms = 3000) {
+  bubble.textContent = text;
+  bubble.classList.add("show");
+  setTimeout(() => bubble.classList.remove("show"), ms);
+}
+
+function flip() {
+  cat.classList.remove("flip");
+  void cat.offsetWidth;            // restart the animation if it is already running
+  cat.classList.add("flip");
+  drawCat("happy");
+  setTimeout(() => { cat.classList.remove("flip"); drawCat("wink"); }, 1100);
+  setTimeout(() => drawCat("normal"), 2000);
+}
+
+cat.addEventListener("click", flip);   // click William and he flips
+
+// 3. Put a message on the screen
 function addMessage(who, text) {
   const div = document.createElement("div");
   div.className = "msg " + who;   // "msg me" or "msg william"
@@ -33,37 +55,47 @@ function addMessage(who, text) {
   chat.scrollTop = chat.scrollHeight;
 }
 
-// 3. The conversation so far. The model remembers nothing, so we send all of it every time.
+// 4. The conversation so far. The model remembers nothing, so we send all of it every time.
 const history = [];
 
-// 4. When you press Send
-// 4. Ask William: send the lesson and the conversation, show his answer
+// 5. Ask William: send the course, the lesson and the conversation, show his answer
 async function askWilliam() {
   drawCat("think");
   button.disabled = true;
 
-  let reply;
+  let data;
   try {
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ lesson: Number(lessonSelect.value), messages: history }),
+      body: JSON.stringify({ course: courseSelect.value, lesson: Number(lessonSelect.value), messages: history }),
     });
-    const data = await response.json();
-    reply = data.reply;
+    data = await response.json();
   } catch (error) {
-    reply = "Miau... the server isn't answering. Is it running?";
+    data = { reply: ui.no_server || "Miau… the server isn't answering.", quiz: null };
   }
 
-  history.push({ role: "assistant", content: reply });
-  addMessage("william", reply);
-  drawCat("happy");
-  setTimeout(() => drawCat("normal"), 1500);
+  history.push({ role: "assistant", content: data.reply });
+  addMessage("william", data.reply);
+
+  if (data.quiz) {                         // the quiz just ended
+    const { score, total } = data.quiz;
+    addMessage("result", `${ui.score}: ${score} / ${total}`);
+    if (score === total) {                 // all correct: flip!
+      flip();
+      say(ui.perfect, 4000);
+    } else {
+      drawCat("happy");
+    }
+  } else {
+    drawCat("happy");
+    setTimeout(() => drawCat("normal"), 1500);
+  }
   button.disabled = false;
   input.focus();
 }
 
-// 5. When you press Send
+// 6. When you press Send
 form.addEventListener("submit", async (event) => {
   event.preventDefault();          // stop the browser from reloading the page
   const text = input.value.trim();
@@ -75,8 +107,7 @@ form.addEventListener("submit", async (event) => {
   await askWilliam();
 });
 
-
-// 6. The lesson card: everything new in this lesson, built from the course file
+// 7. The lesson card: everything new in this lesson, built from the course file
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -86,48 +117,94 @@ function el(tag, className, text) {
 
 function showCard(lesson) {
   const card = el("section", "card");
-  card.appendChild(el("h2", "", `Lesson ${lesson.id} · ${lesson.title_zh}`));
-  card.appendChild(el("p", "subtitle", lesson.title_en));
+  card.appendChild(el("h2", "", lesson.title));
+  card.appendChild(el("p", "subtitle", lesson.title_learner));
 
   if (lesson.grammar.length) {
     const goals = lesson.grammar.map((g) => g.name).join(" · ");
-    card.appendChild(el("p", "goals", "You'll learn: " + goals));
+    card.appendChild(el("p", "goals", `${ui.you_will_learn} ${goals}`));
   }
 
-  card.appendChild(el("h3", "", "New words"));
-  const table = el("table", "words");
-  for (const w of lesson.words.concat(lesson.proper_nouns)) {
-    const row = el("tr");
-    row.appendChild(el("td", "zh", w.zh));
-    row.appendChild(el("td", "py", w.pinyin));
-    row.appendChild(el("td", "en", w.en));
-    table.appendChild(row);
+  if (lesson.words.length) {
+    card.appendChild(el("h3", "", ui.new_words));
+    const table = el("table", "words");
+    for (const w of lesson.words) {
+      const row = el("tr");
+      row.appendChild(el("td", "text", w.text));
+      row.appendChild(el("td", "pron", w.pron || ""));
+      row.appendChild(el("td", "meaning", w.meaning));
+      table.appendChild(row);
+    }
+    card.appendChild(table);
   }
-  card.appendChild(table);
 
-  card.appendChild(el("h3", "", "Grammar"));
-  for (const g of lesson.grammar) {
-    const box = el("div", "grammar");
-    box.appendChild(el("p", "g-name", g.name));
-    box.appendChild(el("p", "g-pattern", g.pattern));
-    const ex = g.examples[0];
-    box.appendChild(el("p", "g-example", `${ex.zh}  ${ex.pinyin}  –  ${ex.en}`));
-    card.appendChild(box);
+  if (lesson.grammar.length) {
+    card.appendChild(el("h3", "", ui.grammar));
+    for (const g of lesson.grammar) {
+      const box = el("div", "grammar");
+      box.appendChild(el("p", "g-name", g.name));
+      box.appendChild(el("p", "g-explain", g.explain));
+      box.appendChild(el("p", "g-pattern", g.pattern));
+      for (const ex of g.examples.slice(0, 2)) {
+        const parts = [ex.text, ex.pron, ex.meaning].filter(Boolean);
+        box.appendChild(el("p", "g-example", parts.join("  –  ")));
+      }
+      card.appendChild(box);
+    }
   }
 
   chat.appendChild(card);
 }
 
-// 7. Lessons: fill the menu, start the chosen lesson
+// 8. Start a lesson: card first, then William opens it
 async function startLesson() {
   chat.innerHTML = "";             // clear the screen
   history.length = 0;              // forget the old conversation
-  localStorage.setItem("lesson", lessonSelect.value);
-  const response = await fetch(`/api/lessons/${lessonSelect.value}`);
-  showCard(await response.json()); // the handout first...
+  localStorage.setItem("course", courseSelect.value);
+  localStorage.setItem("lesson-" + courseSelect.value, lessonSelect.value);
+
+  const response = await fetch(`/api/courses/${courseSelect.value}/lessons/${lessonSelect.value}`);
+  const data = await response.json();
+  ui = data.ui;
+  input.placeholder = ui.placeholder;
+  button.textContent = ui.send;
+
+  showCard(data.lesson);           // the handout first...
   await askWilliam();              // ...then William opens the lesson
   chat.scrollTop = 0;              // start reading at the top of the card
 }
 
+// 9. Fill the lesson menu for the chosen course
+async function loadLessons() {
+  const response = await fetch(`/api/courses/${courseSelect.value}/lessons`);
+  const lessons = await response.json();
+  lessonSelect.innerHTML = "";
+  for (const lesson of lessons) {
+    const option = document.createElement("option");
+    option.value = lesson.id;
+    option.textContent = `${lesson.title} · ${lesson.title_learner}`;
+    lessonSelect.appendChild(option);
+  }
+  lessonSelect.value = localStorage.getItem("lesson-" + courseSelect.value) || lessons[0].id;
+  await startLesson();
+}
+
+// 10. Fill the course menu (hidden when there is only one course)
+async function loadCourses() {
+  const response = await fetch("/api/courses");
+  const courses = await response.json();
+  for (const course of courses) {
+    const option = document.createElement("option");
+    option.value = course.id;
+    option.textContent = course.name;
+    courseSelect.appendChild(option);
+  }
+  courseSelect.hidden = courses.length < 2;
+  const saved = localStorage.getItem("course");
+  if (courses.some((c) => c.id === saved)) courseSelect.value = saved;
+  await loadLessons();
+}
+
+courseSelect.addEventListener("change", loadLessons);
 lessonSelect.addEventListener("change", startLesson);
-loadLessons();
+loadCourses();
