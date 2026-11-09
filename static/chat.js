@@ -5,6 +5,7 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const cat = document.getElementById("cat");
 const button = form.querySelector("button");
+const lessonSelect = document.getElementById("lesson");
 
 // 1. Draw William
 const EYES = { normal: "o   o", happy: "^   ^", think: "-   o" };
@@ -36,15 +37,8 @@ function addMessage(who, text) {
 const history = [];
 
 // 4. When you press Send
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();          // stop the browser from reloading the page
-  const text = input.value.trim();
-  if (!text) return;
-
-  input.value = "";
-  addMessage("me", text);
-  history.push({ role: "user", content: text });
-
+// 4. Ask William: send the lesson and the conversation, show his answer
+async function askWilliam() {
   drawCat("think");
   button.disabled = true;
 
@@ -53,7 +47,7 @@ form.addEventListener("submit", async (event) => {
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: history }),
+      body: JSON.stringify({ lesson: Number(lessonSelect.value), messages: history }),
     });
     const data = await response.json();
     reply = data.reply;
@@ -67,7 +61,73 @@ form.addEventListener("submit", async (event) => {
   setTimeout(() => drawCat("normal"), 1500);
   button.disabled = false;
   input.focus();
+}
+
+// 5. When you press Send
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();          // stop the browser from reloading the page
+  const text = input.value.trim();
+  if (!text || button.disabled) return;
+
+  input.value = "";
+  addMessage("me", text);
+  history.push({ role: "user", content: text });
+  await askWilliam();
 });
 
-// 5. William says hello first
-addMessage("william", "你好 (nǐ hǎo)! I'm William. What would you like to learn today?");
+
+// 6. The lesson card: everything new in this lesson, built from the course file
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text) node.textContent = text;
+  return node;
+}
+
+function showCard(lesson) {
+  const card = el("section", "card");
+  card.appendChild(el("h2", "", `Lesson ${lesson.id} · ${lesson.title_zh}`));
+  card.appendChild(el("p", "subtitle", lesson.title_en));
+
+  if (lesson.grammar.length) {
+    const goals = lesson.grammar.map((g) => g.name).join(" · ");
+    card.appendChild(el("p", "goals", "You'll learn: " + goals));
+  }
+
+  card.appendChild(el("h3", "", "New words"));
+  const table = el("table", "words");
+  for (const w of lesson.words.concat(lesson.proper_nouns)) {
+    const row = el("tr");
+    row.appendChild(el("td", "zh", w.zh));
+    row.appendChild(el("td", "py", w.pinyin));
+    row.appendChild(el("td", "en", w.en));
+    table.appendChild(row);
+  }
+  card.appendChild(table);
+
+  card.appendChild(el("h3", "", "Grammar"));
+  for (const g of lesson.grammar) {
+    const box = el("div", "grammar");
+    box.appendChild(el("p", "g-name", g.name));
+    box.appendChild(el("p", "g-pattern", g.pattern));
+    const ex = g.examples[0];
+    box.appendChild(el("p", "g-example", `${ex.zh}  ${ex.pinyin}  –  ${ex.en}`));
+    card.appendChild(box);
+  }
+
+  chat.appendChild(card);
+}
+
+// 7. Lessons: fill the menu, start the chosen lesson
+async function startLesson() {
+  chat.innerHTML = "";             // clear the screen
+  history.length = 0;              // forget the old conversation
+  localStorage.setItem("lesson", lessonSelect.value);
+  const response = await fetch(`/api/lessons/${lessonSelect.value}`);
+  showCard(await response.json()); // the handout first...
+  await askWilliam();              // ...then William opens the lesson
+  chat.scrollTop = 0;              // start reading at the top of the card
+}
+
+lessonSelect.addEventListener("change", startLesson);
+loadLessons();

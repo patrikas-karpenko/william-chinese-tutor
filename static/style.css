@@ -23,7 +23,7 @@ body {
 }
 
 /* William on top, in the middle */
-.mascot { text-align: center; padding: 24px 16px 4px; }
+.mascot { width: 100%; max-width: 720px; text-align: center; padding: 24px 16px 4px; }
 #cat {
   display: inline-block;
   margin: 0;
@@ -34,6 +34,18 @@ body {
   color: var(--accent);
 }
 .name { margin: 6px 0 0; font-weight: 600; color: var(--muted); }
+
+#lesson {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 420px;
+  padding: 8px 12px;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
 
 /* The conversation */
 #chat {
@@ -56,6 +68,31 @@ body {
 }
 .msg.william { align-self: flex-start; background: var(--card); border: 1px solid var(--line); }
 .msg.me { align-self: flex-end; background: var(--accent); color: white; }
+
+/* The lesson card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+.card h2 { margin: 0; font-size: 20px; }
+.card h3 { margin: 16px 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.subtitle { margin: 2px 0 0; color: var(--muted); }
+.goals { margin: 10px 0 0; }
+
+.words { width: 100%; border-collapse: collapse; }
+.words td { padding: 5px 8px 5px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.words .zh { font-size: 18px; white-space: nowrap; }
+.words .py { color: var(--accent); white-space: nowrap; }
+.words .en { color: var(--muted); }
+
+.grammar { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.grammar:last-child { border-bottom: 0; }
+.grammar p { margin: 2px 0; }
+.g-name { font-weight: 600; }
+.g-pattern { font-size: 17px; }
+.g-example { color: var(--muted); }
 
 /* The input line at the bottom */
 #form { width: 100%; max-width: 720px; display: flex; gap: 8px; padding: 12px 16px 20px; }
